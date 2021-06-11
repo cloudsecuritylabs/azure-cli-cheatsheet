@@ -92,6 +92,11 @@ az group delete --name myResourceGroup
 az vm list
 ```
 
+```
+az vm list -g myresourcegroup --query '[].{Name:name}' -o json
+
+```
+
 ### Start a VM
 ```
 az vm start --resource-group myResourceGroup --name myVM
